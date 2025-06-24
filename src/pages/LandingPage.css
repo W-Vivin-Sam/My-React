@@ -1,0 +1,95 @@
+/* src/pages/LandingPage.css */
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* OPTION 1: Use direct URL (works immediately) */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.pexels.com/photos/4505456/pexels-photo-4505456.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+/* OPTION 2: Correct local path (requires image in public/images) */
+/* .background-image {
+  background-image: url('/images/nursery-bg.jpg');
+} */
+
+/* OPTION 3: Import via JS (requires moving image to src/assets) */
+/* .background-image {
+  background-image: var(--landing-bg);
+} */
+
+.content-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-name {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #e8f5e9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.company-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.get-started-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.get-started-btn:hover {
+  background-color: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .company-name {
+    font-size: 2.5rem;
+  }
+  
+  .company-description {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .get-started-btn {
+    padding: 12px 30px;
+  }
+}
